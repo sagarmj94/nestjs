@@ -3,7 +3,8 @@ import { BookService } from "./book.service";
 
 @Controller("book")
 export class BookController {
-  public bookService: BookService = new BookService();
+  constructor(private bookService: BookService) {}
+
   //addbook
   @Post("/add")
   addBook(): string {
